@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FlatList, View, Text, StyleSheet, Alert } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { connect } from 'react-redux';
-import { Loading } from './LoadingComponent';
+import {Loading}  from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 import { SwipeRow } from 'react-native-swipe-list-view';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -75,6 +75,7 @@ class Favorites extends Component {
         if (this.props.campsites.isLoading) {
             return <Loading />;
         }
+        
         if (this.props.campsites.errMess) {
             return (
                 <View>
